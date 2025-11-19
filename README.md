@@ -1,19 +1,19 @@
-<img src="insighAppSec-logo-black.png" alt="InsightAppSec" width="150">
+<img src="application-security-b-l.svg" alt="Application Security" width="300">
 
-# InsightAppSec Scan Action
-The [InsightAppSec Scan](https://docs.rapid7.com/insightappsec/github-actions-integration) GitHub Action allows security and development teams to integrate dynamic application security testing (DAST) into the CI/CD pipeline.
+# Rapid7 Application Security Scan Action
+The [Rapid7Application Security Scan](https://docs.rapid7.com/insightappsec/github-actions-integration) GitHub Action allows security and development teams to integrate dynamic application security testing (DAST) into the CI/CD pipeline.
 
-# About InsightAppSec
-[InsightAppSec](https://www.rapid7.com/products/insightappsec/) is Rapid7’s industry leading Dynamic Application Security Testing (DAST) that helps you understand and minimize risk in your web applications and APIs. 
+# About Rapid7 Application Security
+[Rapid7 Application Security](https://www.rapid7.com/products/insightappsec/) is Rapid7's industry leading Dynamic Application Security Testing (DAST) that helps you understand and minimize risk in your web applications and APIs.
 
 # Usage
-The action will start a scan on Rapid7 InsightAppSec and depending on configuration either:
+The action will start a scan on Rapid7 Application Security and depending on configuration either:
 - wait for its completion and return a result summary to the logs. These results can be filtered using the `vuln-query` (scan gating) option in the config.
-- immediately return the InsightAppSec scan ID to the logs and the action finishes.
+- immediately return the Application Security scan ID to the logs and the action finishes.
 
 This behavior can be configured using the `wait-for-scan-complete` option in the config.
 
-The InsightAppSec API key will need to be added as a GitHub secret in order for the action to work. See how to do this here: https://docs.github.com/en/actions/security-guides/encrypted-secrets
+The Application Security API key will need to be added as a GitHub secret in order for the action to work. See how to do this here: https://docs.github.com/en/actions/security-guides/encrypted-secrets
 
 
 ```yaml
@@ -22,11 +22,11 @@ The InsightAppSec API key will need to be added as a GitHub secret in order for 
     # The region indicates the geo-location of the Insight Platform. For example 'us'.
     region: "us"
     # The API key used to authorized the GitHub action to interact with the Rapid7 API. The API key should be stored as
-    # a GitHub secret. Instructions for creating an InsightAppSec API key are shown in the Rapid7 InsightAppSec
+    # a GitHub secret. Instructions for creating an Application Security API key are shown in the Rapid7 Application Security
     # documentation.
-    api-key: ${{ secrets.INSIGHTAPPSEC_API_KEY }}
+    api-key: ${{ secrets.APPSEC_API_KEY }}
     # The UUID of the scan configuration to be used during scanning. The scan configuration should be a sub-resource of
-    # the application and can be obtained from InsightAppSec.
+    # the application and can be obtained from Application Security.
     scan-config-id: "999703e4-a4p0-4ea6-a3sc-53cg789e4fc1"
     # Scan gating query. Used to filter results by vulnerability properties. If this has a value and the query returns
     # vulnerabilities from the scan then the job will be marked as failed. The format of the scan gating query should conform to the 
