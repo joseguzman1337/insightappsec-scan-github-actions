@@ -1,6 +1,6 @@
-name: "Rapid7 InsightAppSec Scan"
+name: "Rapid7 Application Security Scan"
 description: >
-  The Rapid7 InsightAppSec Scan action allows application and security teams to embed DAST into build and release pipelines.
+  The Rapid7 Application Security Scan action allows application and security teams to embed DAST into build and release pipelines.
 inputs:
   region:
     description: "The region indicates the geo-location of the Insight Platform"
@@ -14,7 +14,7 @@ inputs:
   scan-config-id:
     description: >
       The UUID of the scan configuration to be used during scanning. The scan configuration should be a sub-resource of
-      the application and can be obtained from InsightAppSec
+      the application and can be obtained from Rapid7 Application Security
     required: true
   vuln-query:
     description: >
@@ -23,7 +23,7 @@ inputs:
     default: ""
   wait-for-scan-complete:
     description: >
-      Wait for scan to complete before finishing action. False will return the InsightAppSec Scan ID.
+      Wait for scan to complete before finishing action. False will return the Application Security Scan ID.
     required: false
     default: true
   scan-timeout-mins:
