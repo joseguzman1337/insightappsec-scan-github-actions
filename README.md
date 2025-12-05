@@ -1,7 +1,10 @@
-<img src="application-security-b-l.svg" alt="Application Security" width="300">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="application-security-w-l.svg">
+  <img src="application-security-b-l.svg" alt="Application Security" width="300">
+</picture>
 
 # Rapid7 Application Security Scan Action
-The [Rapid7Application Security Scan](https://docs.rapid7.com/insightappsec/github-actions-integration) GitHub Action allows security and development teams to integrate dynamic application security testing (DAST) into the CI/CD pipeline.
+The [Rapid7 Application Security Scan](https://docs.rapid7.com/insightappsec/github-actions-integration) GitHub Action allows security and development teams to integrate dynamic application security testing (DAST) into the CI/CD pipeline.
 
 # About Rapid7 Application Security
 [Rapid7 Application Security](https://www.rapid7.com/products/insightappsec/) is Rapid7's industry leading Dynamic Application Security Testing (DAST) that helps you understand and minimize risk in your web applications and APIs.
@@ -19,7 +22,7 @@ The Application Security API key will need to be added as a GitHub secret in ord
 ```yaml
 - uses: rapid7/insightappsec-scan-github-actions@v1.3.5
   with:
-    # The region indicates the geo-location of the Insight Platform. For example 'us'.
+    # The region indicates the geo-location of the Rapid7 Platform. For example 'us'.
     region: "us"
     # The API key used to authorized the GitHub action to interact with the Rapid7 API. The API key should be stored as
     # a GitHub secret. Instructions for creating an Application Security API key are shown in the Rapid7 Application Security
